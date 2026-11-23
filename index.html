@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en" class="page-loading">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101515" />
+    <meta name="description" content="Mohamad Moukayed is a UAE-based engineering student working across robotics, embedded systems, electronics, software, and cybersecurity." />
+    <meta property="og:title" content="Mohamad Moukayed — Engineering Portfolio" />
+    <meta property="og:description" content="Engineering beyond the theoretical: robotics, embedded systems, electronics, and software." />
+    <meta property="og:type" content="website" />
+    <title>Mohamad Moukayed — Engineering Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#home" aria-label="Mohamad Moukayed, home"><span class="brand-mark">MM<span>.</span></span><span class="brand-name">MOHAMAD<br />MOUKAYED</span></a>
+        <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#achievements">Achievements</a>
+          <a href="#about">About</a>
+        </nav>
+        <a class="header-contact" href="#contact">Contact <span aria-hidden="true">↗</span></a>
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="siteNav"><span></span><span></span></button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero wrap" id="home" aria-labelledby="heroTitle">
+        <div class="hero-copy" data-reveal>
+          <p class="eyebrow"><span class="status-dot"></span> ENGINEERING PORTFOLIO <span class="eyebrow-divider">/</span> UNITED ARAB EMIRATES</p>
+          <h1 id="heroTitle">Engineering beyond the <em>theoretical.</em></h1>
+          <p class="hero-intro">I’m Mohamad Moukayed, an engineering student building across robotics, embedded systems, electronics, and software. I enjoy practical problems where hardware and software have to work together.</p>
+          <div class="hero-actions">
+            <a class="button button-solid" href="#projects">View projects <span aria-hidden="true">↓</span></a>
+            <a class="button button-quiet" href="#about">About me <span aria-hidden="true">↗</span></a>
+            <button class="tour-trigger" id="tourTrigger" type="button"><span class="tour-play" aria-hidden="true">▶</span> Guided tour</button>
+          </div>
+          <div class="hero-focus"><span>FOCUS</span><p>Robotics <i>·</i> Embedded <i>·</i> Electronics <i>·</i> Software</p></div>
+        </div>
+        <div class="hero-visual" data-reveal>
+          <div class="visual-topline"><span>FIELD STUDY <b>01</b></span><span>SUMO PLATFORM / SCHEMATIC</span></div>
+          <div class="robot-stage" id="robotStage" aria-label="Interactive schematic illustration of a two-wheel autonomous sumo robot. Drag to rotate the view.">
+            <div class="stage-grid" aria-hidden="true"></div>
+            <div class="stage-axis axis-x" aria-hidden="true"></div><div class="stage-axis axis-y" aria-hidden="true"></div>
+            <div class="robot-model" id="robotModel">
+              <svg viewBox="0 0 620 420" role="img" aria-labelledby="robotSvgTitle robotSvgDesc">
+                <title id="robotSvgTitle">Autonomous sumo robot concept diagram</title>
+                <desc id="robotSvgDesc">A labeled engineering illustration showing a front wedge, two drive wheels, four distance sensors, four edge sensors, and a camera.</desc>
+                <defs>
+                  <linearGradient id="chassis" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d7dfd9" /><stop offset="1" stop-color="#85918a" /></linearGradient>
+                  <linearGradient id="wedge" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d8c28f" /><stop offset="1" stop-color="#90815e" /></linearGradient>
+                  <filter id="robotShadow" x="-.3" y="-.4" width="1.6" height="1.8"><feGaussianBlur stdDeviation="10" /></filter>
+                </defs>
+                <ellipse cx="313" cy="317" rx="200" ry="36" fill="#050909" opacity=".45" filter="url(#robotShadow)" />
+                <g class="robot-drawing" stroke-linejoin="round" stroke-linecap="round">
+                  <path d="m167 146 42-42h204l42 42v153q-144 63-288 0z" fill="url(#chassis)" stroke="#eff6ef" stroke-width="2" />
+                  <path d="m172 257 276 0 44 63q-182 59-364 0z" fill="url(#wedge)" stroke="#ead7a9" stroke-width="2" />
+                  <path d="m172 257 276 0" fill="none" stroke="#f5e7bf" stroke-width="3" />
+                  <path d="m209 121 24-17m178 0 24 17" fill="none" stroke="#78857f" stroke-width="2" />
+                  <rect x="135" y="153" width="42" height="133" rx="12" fill="#222c2a" stroke="#929f98" stroke-width="2" />
+                  <rect x="443" y="153" width="42" height="133" rx="12" fill="#222c2a" stroke="#929f98" stroke-width="2" />
+                  <path d="M148 169v101m324-101v101" stroke="#66736c" stroke-width="3" stroke-dasharray="5 8" />
+                  <rect x="241" y="131" width="138" height="88" rx="8" fill="#57635e" stroke="#e3ebe4" stroke-width="2" />
+                  <path d="m257 149 40-13 65 13v48l-48 13-57-13z" fill="#293432" stroke="#a3b0a7" stroke-width="1.5" />
+                  <path d="M300 143v60m-37-45 98 31m-98 0 98-31" stroke="#65746b" stroke-width="1" />
+                  <rect x="282" y="110" width="56" height="26" rx="4" fill="#343e3a" stroke="#d7e0d8" stroke-width="2" />
+                  <circle cx="310" cy="120" r="8" fill="#99c1c0" stroke="#efffff" stroke-width="2" />
+                  <circle cx="197" cy="155" r="10" fill="#24322e" stroke="#9fe0c4" stroke-width="3" />
+                  <circle cx="423" cy="155" r="10" fill="#24322e" stroke="#9fe0c4" stroke-width="3" />
+                  <circle cx="197" cy="226" r="10" fill="#24322e" stroke="#9fe0c4" stroke-width="3" />
+                  <circle cx="423" cy="226" r="10" fill="#24322e" stroke="#9fe0c4" stroke-width="3" />
+                  <circle cx="227" cy="274" r="7" fill="#d5aa69" stroke="#fff0ca" stroke-width="2" />
+                  <circle cx="279" cy="278" r="7" fill="#d5aa69" stroke="#fff0ca" stroke-width="2" />
+                  <circle cx="341" cy="278" r="7" fill="#d5aa69" stroke="#fff0ca" stroke-width="2" />
+                  <circle cx="393" cy="274" r="7" fill="#d5aa69" stroke="#fff0ca" stroke-width="2" />
+                  <path d="m310 100 0-33m-7 7 7-7 7 7" fill="none" stroke="#d9e4d9" stroke-width="1.5" />
+                  <path d="M146 189H72m0 0 10-7m-10 7 10 7" fill="none" stroke="#9fe0c4" stroke-width="1.5" />
+                  <path d="M474 202h75m0 0-10-7m10 7-10 7" fill="none" stroke="#9fe0c4" stroke-width="1.5" />
+                  <path d="M210 282 151 347h-47m412 0h-47l-59-65" fill="none" stroke="#d7b97d" stroke-width="1.5" stroke-dasharray="4 5" />
+                </g>
+              </svg>
+            </div>
+            <span class="diagram-label label-camera">USB CAMERA <i>01</i></span>
+            <span class="diagram-label label-tof">VL53L1X × 4 <i>02</i></span>
+            <span class="diagram-label label-edge">EDGE SENSORS <i>03</i></span>
+            <span class="diagram-axis-label">X <b>+</b></span>
+            <button class="model-control" id="modelControl" type="button" aria-label="Rotate robot schematic">Drag to inspect <span aria-hidden="true">↗</span></button>
+          </div>
+          <div class="visual-caption"><span>Illustrative schematic · not a project photograph</span><span>3 KG AUTONOMOUS ROBOT</span></div>
+        </div>
+        <div class="hero-bottomline"><span>HANDS-ON ENGINEERING</span><span class="line"></span><span>HARDWARE <b>+</b> SOFTWARE</span></div>
+      </section>
+
+      <section class="section profile-section wrap" id="about" aria-labelledby="aboutTitle">
+        <div class="section-kicker" data-reveal><span class="section-index">01</span><span>PROFILE</span></div>
+        <div class="profile-grid">
+          <h2 class="section-title" id="aboutTitle" data-reveal>Build, integrate,<br /><em>understand.</em></h2>
+          <div class="profile-copy" data-reveal>
+            <p class="profile-lede">I’m a UAE-based engineering student with a strong interest in technology and practical problem-solving.</p>
+            <p>I like understanding how systems work at a low level, then bringing their parts together: sensors, circuits, firmware, software, and the physical build. I learn by prototyping, testing, and troubleshooting with real hardware.</p>
+            <div class="interest-list" aria-label="Areas of interest"><span>Robotics & autonomy</span><span>Embedded systems</span><span>Electronics</span><span>Software</span><span>Cybersecurity</span><span>Fabrication</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section projects-section wrap" id="projects" aria-labelledby="projectsTitle">
+        <div class="section-heading" data-reveal>
+          <div><div class="section-kicker"><span class="section-index">02</span><span>SELECTED WORK</span></div><h2 class="section-title" id="projectsTitle">Projects in <em>practice.</em></h2></div>
+          <p class="section-description">A mix of builds, prototypes, and software. Open a project for its technical notes.</p>
+        </div>
+
+        <article class="featured-project" data-reveal>
+          <div class="featured-media project-media sumo-media" aria-label="Project image placeholder with an illustrative sumo robot schematic">
+            <span class="media-overline">FEATURED BUILD <b>01 / 07</b></span>
+            <svg class="sumo-sketch" viewBox="0 0 500 290" role="img" aria-label="Illustrative side view of a compact autonomous sumo robot with front wedge and two drive wheels">
+              <path class="sketch-ground" d="M48 238h402" />
+              <path class="sketch-shadow" d="M106 224q145 39 290 0" />
+              <path class="sketch-body" d="m132 182 34-77q84-45 168 0l34 77-28 30q-90 29-180 0z" />
+              <path class="sketch-wedge" d="m119 190 261 0 71 44q-202 50-403 0z" />
+              <path class="sketch-line" d="M132 182h236M178 116h144m-72-16v112" />
+              <rect class="sketch-wheel" x="91" y="155" width="40" height="68" rx="12" /><rect class="sketch-wheel" x="369" y="155" width="40" height="68" rx="12" />
+              <circle class="sketch-sensor" cx="188" cy="181" r="7"/><circle class="sketch-sensor" cx="250" cy="181" r="7"/><circle class="sketch-sensor" cx="312" cy="181" r="7"/>
+              <path class="sketch-leader" d="M250 95V56h80"/><path class="sketch-leader" d="M129 158 75 117H36"/>
+              <text x="337" y="60">CAMERA + TOF</text><text x="14" y="112">2WD</text>
+            </svg>
+            <span class="media-placeholder-label"><span class="placeholder-icon">＋</span> Replace with a photo of the robot</span>
+            <span class="media-caption">Illustrative concept diagram · not a photograph</span>
+          </div>
+          <div class="featured-copy">
+            <div class="project-meta"><span class="status status-build"><i></i> IN DEVELOPMENT</span><span class="project-number">PROJECT 01</span></div>
+            <h3>3 kg Autonomous<br />Sumo Robot</h3>
+            <p class="project-summary">A two-wheel autonomous robot designed to find an opponent, avoid the arena edge, and push the other robot out of the ring.</p>
+            <p class="project-description">The design combines a front wedge with camera-based opponent detection and a sensor layer for close-range distance and boundary awareness. The platform is being developed around an Arduino Uno Q, with separate 12 V and 5 V power regulation.</p>
+            <div class="tag-list"><span>Arduino Uno Q</span><span>Computer vision</span><span>VL53L1X</span><span>IBT-2</span><span>Motor control</span></div>
+            <details class="tech-details" id="sumoDetails">
+              <summary>Technical breakdown <span aria-hidden="true">＋</span></summary>
+              <div class="details-content">
+                <ul class="spec-list">
+                  <li><b>Sensing</b><span>Four VL53L1X time-of-flight sensors and four IR edge-detection sensors.</span></li>
+                  <li><b>Drive</b><span>Two-wheel drive with dual IBT-2 motor drivers.</span></li>
+                  <li><b>Vision</b><span>USB webcam and camera-based computer vision for opponent detection.</span></li>
+                  <li><b>Power</b><span>Separate 12 V and 5 V regulation for the robot’s power distribution.</span></li>
+                  <li><b>Behaviour</b><span>Autonomous opponent search and attack, with boundary detection and avoidance around the arena’s white line.</span></li>
+                </ul>
+                <p class="detail-note">Current status: development. This page describes the design direction and components; it does not present the robot as a finished product.</p>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <div class="project-grid">
+          <article class="project-card" data-reveal>
+            <div class="project-media media-rpm"><span class="media-overline">BUILD 02</span><span class="media-code">RPM<br /><b>↻</b></span><span class="media-placeholder-label"><span class="placeholder-icon">＋</span> Add project photo</span></div>
+            <div class="project-card-body"><div class="project-meta"><span class="status status-prototype"><i></i> PROTOTYPE</span><span class="project-number">02</span></div><h3>Automotive Wheel RPM & Speed Monitor</h3><p>ESP32-based measurement of a real vehicle wheel using optical pulses, with wireless readings and a compact display.</p><div class="tag-list"><span>ESP32</span><span>ESP-NOW</span><span>U8g2</span></div><details class="tech-details"><summary>Technical details <span aria-hidden="true">＋</span></summary><div class="details-content"><p>A laser and LDR detect wheel pulses. Interrupt-based counting feeds RPM calculations, then wheel circumference is used to estimate vehicle speed. An OLED driven by U8g2 presents the readings; ESP-NOW carries data wirelessly.</p></div></details></div>
+          </article>
+
+          <article class="project-card" data-reveal>
+            <div class="project-media media-gps"><span class="media-overline">BUILD 03</span><span class="media-code">GPS<br /><b>⌖</b></span><span class="media-placeholder-label"><span class="placeholder-icon">＋</span> Add project photo</span></div>
+            <div class="project-card-body"><div class="project-meta"><span class="status status-build"><i></i> IN DEVELOPMENT</span><span class="project-number">03</span></div><h3>GPS Speed Limit Monitor</h3><p>An ESP32-based automotive concept combining GPS position, regional boundary data, and a display.</p><div class="tag-list"><span>ESP32</span><span>GPS</span><span>Display</span></div><details class="tech-details"><summary>Technical details <span aria-hidden="true">＋</span></summary><div class="details-content"><p>The project processes GPS coordinates against UAE geographical boundary data and presents location and speed-related information on an integrated display. It is an embedded-system project in development.</p></div></details></div>
+          </article>
+
+          <article class="project-card" data-reveal>
+            <div class="project-media media-dashboard"><span class="media-overline">BUILD 04</span><span class="media-code">DASH<br /><b>▤</b></span><span class="media-placeholder-label"><span class="placeholder-icon">＋</span> Add dashboard screenshot</span></div>
+            <div class="project-card-body"><div class="project-meta"><span class="status status-built"><i></i> BUILT PROJECT</span><span class="project-number">04</span></div><h3>ESP32 Smart Dashboard</h3><p>A custom embedded display interface for date, time, and Microsoft To Do tasks grouped by due date.</p><div class="tag-list"><span>ESP32</span><span>Embedded UI</span><span>Task integration</span></div><details class="tech-details"><summary>Technical details <span aria-hidden="true">＋</span></summary><div class="details-content"><p>Combines an ESP32 display, custom layouts, embedded rendering, and task integration. Tasks are categorized by due date for a concise dashboard view.</p></div></details></div>
+          </article>
+
+          <article class="project-card" data-reveal>
+            <div class="project-media media-zam"><span class="media-overline">SOFTWARE 05</span><span class="media-code">ZAM<br /><b>♫</b></span><span class="media-placeholder-label"><span class="placeholder-icon">＋</span> Add app screenshots</span></div>
+            <div class="project-card-body"><div class="project-meta"><span class="status status-built"><i></i> DEVELOPED</span><span class="project-number">05</span></div><h3>Zam — Native Android Music Player</h3><p>A Kotlin music player built with XML Views, local media browsing, playback controls, and account support.</p><div class="tag-list"><span>Kotlin</span><span>Media3</span><span>Room</span><span>Firebase</span></div><details class="tech-details"><summary>Technical details <span aria-hidden="true">＋</span></summary><div class="details-content"><p>Uses Android XML layouts, Media3 / ExoPlayer, MediaStore, Room Database, and Firebase Authentication. Includes queue and album-art management, MediaSession support, and playback notifications.</p></div></details></div>
+          </article>
+
+          <article class="project-card" data-reveal>
+            <div class="project-media media-pi"><span class="media-overline">INFRASTRUCTURE 06</span><span class="media-code">PI<br /><b>⌘</b></span><span class="media-placeholder-label"><span class="placeholder-icon">＋</span> Add setup photo</span></div>
+            <div class="project-card-body"><div class="project-meta"><span class="status status-experiment"><i></i> EXPERIMENTS</span><span class="project-number">06</span></div><h3>Raspberry Pi Networking & Servers</h3><p>A collection of Linux networking and self-hosted service experiments on Raspberry Pi.</p><div class="tag-list"><span>Raspberry Pi</span><span>Linux</span><span>WireGuard</span></div><details class="tech-details"><summary>Technical details <span aria-hidden="true">＋</span></summary><div class="details-content"><p>Work includes WireGuard VPN configuration, HTTP server hosting, router configuration, Linux networking, and self-hosted services.</p></div></details></div>
+          </article>
+
+          <article class="project-card" data-reveal>
+            <div class="project-media media-torso"><span class="media-overline">ROBOTICS 07</span><span class="media-code">SERVO<br /><b>◎</b></span><span class="media-placeholder-label"><span class="placeholder-icon">＋</span> Add prototype photo</span></div>
+            <div class="project-card-body"><div class="project-meta"><span class="status status-prototype"><i></i> PROTOTYPE</span><span class="project-number">07</span></div><h3>Sensor-Integrated Robotic Torso</h3><p>A robotics prototype exploring servo actuation, sensor inputs, and mechanical-electronic integration.</p><div class="tag-list"><span>Servos</span><span>Sensors</span><span>Embedded</span></div><details class="tech-details"><summary>Technical details <span aria-hidden="true">＋</span></summary><div class="details-content"><p>Focus areas include servo motor control, sensor integration, embedded programming, and the mechanical and electronic interfaces needed to bring a prototype together.</p></div></details></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section experiments-section wrap" id="experiments" aria-labelledby="experimentsTitle">
+        <div class="section-heading compact-heading" data-reveal><div><div class="section-kicker"><span class="section-index">03</span><span>LAB NOTES</span></div><h2 class="section-title" id="experimentsTitle">Experiments & <em>prototypes.</em></h2></div><p class="section-description">Smaller investigations, early builds, and one proposed design—kept distinct from completed projects.</p></div>
+        <div class="experiment-list" data-reveal>
+          <details class="experiment-row"><summary><span class="experiment-index">01</span><span class="experiment-name">ESP32-C3 E-paper Display Integration</span><span class="status status-experiment"><i></i> EXPERIMENT</span><span class="row-plus">＋</span></summary><p>Exploring e-paper displays, display drivers, communication interfaces, and embedded hardware integration.</p></details>
+          <details class="experiment-row"><summary><span class="experiment-index">02</span><span class="experiment-name">ESP32 Camera Development</span><span class="status status-experiment"><i></i> EXPERIMENT</span><span class="row-plus">＋</span></summary><p>Working with ESP32 camera modules, OV3660 sensors, and image-processing workflows.</p></details>
+          <details class="experiment-row"><summary><span class="experiment-index">03</span><span class="experiment-name">ABS Braking System</span><span class="status status-proposed"><i></i> PROPOSED</span><span class="row-plus">＋</span></summary><p>A proposed demonstration using a load cell, voltage comparator, motor-driven wheel, servo-controlled brake, and periodic braking logic. This is a design proposal, not a completed build.</p></details>
+          <details class="experiment-row"><summary><span class="experiment-index">04</span><span class="experiment-name">Wireless Security Experiments</span><span class="status status-experiment"><i></i> EXPERIMENT</span><span class="row-plus">＋</span></summary><p>ESP32-based wireless networking and security testing in authorized environments.</p></details>
+          <details class="experiment-row"><summary><span class="experiment-index">05</span><span class="experiment-name">Embedded QR Code Generation</span><span class="status status-experiment"><i></i> EXPERIMENT</span><span class="row-plus">＋</span></summary><p>Exploring the Richard Moore / Ricmoo QRCode library and QR code generation on embedded platforms.</p></details>
+          <details class="experiment-row"><summary><span class="experiment-index">06</span><span class="experiment-name">Drone Electronics</span><span class="status status-experiment"><i></i> EXPLORATION</span><span class="row-plus">＋</span></summary><p>Exploring flight-controller configuration, ESC integration, and power distribution.</p></details>
+          <details class="experiment-row"><summary><span class="experiment-index">07</span><span class="experiment-name">ROS 2 Robotics</span><span class="status status-experiment"><i></i> EXPLORATION</span><span class="row-plus">＋</span></summary><p>Working with ROS 2 nodes, topics, publishers, and subscribers in robotics-related environments.</p></details>
+        </div>
+      </section>
+
+      <section class="section skills-section wrap" id="skills" aria-labelledby="skillsTitle">
+        <div class="section-heading" data-reveal><div><div class="section-kicker"><span class="section-index">04</span><span>TOOLKIT</span></div><h2 class="section-title" id="skillsTitle">Tools I work <em>with.</em></h2></div><p class="section-description">A practical toolkit across hardware, software, and the systems between them.</p></div>
+        <div class="skills-grid">
+          <article class="skill-card" data-reveal><div class="skill-card-head"><span class="skill-icon">01</span><h3>Embedded Systems</h3></div><ul class="skill-tags"><li>Arduino</li><li>ESP32</li><li>ESP8266</li><li>STM32</li><li>PlatformIO</li><li>Arduino IDE</li><li>ESP-IDF</li></ul></article>
+          <article class="skill-card" data-reveal><div class="skill-card-head"><span class="skill-icon">02</span><h3>Programming</h3></div><ul class="skill-tags"><li>C</li><li>C++</li><li>Python</li><li>Kotlin</li><li>HTML / CSS / JS</li><li>C#</li><li>Lua</li><li>Bash</li></ul></article>
+          <article class="skill-card" data-reveal><div class="skill-card-head"><span class="skill-icon">03</span><h3>Robotics</h3></div><ul class="skill-tags"><li>ROS 2</li><li>Sensor integration</li><li>Autonomous robots</li><li>Motor control</li><li>Robotics communications</li></ul></article>
+          <article class="skill-card" data-reveal><div class="skill-card-head"><span class="skill-icon">04</span><h3>Electronics</h3></div><ul class="skill-tags"><li>Circuit design</li><li>Voltage regulation</li><li>Power distribution</li><li>Motor drivers</li><li>Sensor interfacing</li><li>PWM control</li><li>Troubleshooting</li></ul></article>
+          <article class="skill-card" data-reveal><div class="skill-card-head"><span class="skill-icon">05</span><h3>Software Development</h3></div><ul class="skill-tags"><li>Android</li><li>iOS</li><li>Kotlin</li><li>XML layouts</li><li>Media3 / ExoPlayer</li><li>Firebase</li></ul></article>
+          <article class="skill-card" data-reveal><div class="skill-card-head"><span class="skill-icon">06</span><h3>Networking & Security</h3></div><ul class="skill-tags"><li>Linux networking</li><li>TCP/IP</li><li>Wi-Fi</li><li>WireGuard</li><li>Wireless security</li><li>Authorized testing</li></ul></article>
+          <article class="skill-card" data-reveal><div class="skill-card-head"><span class="skill-icon">07</span><h3>Hardware & Fabrication</h3></div><ul class="skill-tags"><li>Raspberry Pi</li><li>FreeCAD</li><li>3D printing</li><li>Prototyping</li><li>Camera integration</li><li>Display integration</li></ul></article>
+          <article class="skill-card" data-reveal><div class="skill-card-head"><span class="skill-icon">08</span><h3>UI & Displays</h3></div><ul class="skill-tags"><li>LVGL</li><li>TFT_eSPI</li><li>U8g2</li><li>Embedded interfaces</li></ul></article>
+        </div>
+      </section>
+
+      <section class="section achievements-section wrap" id="achievements" aria-labelledby="achievementsTitle">
+        <div class="section-heading" data-reveal><div><div class="section-kicker"><span class="section-index">05</span><span>COMPETITIONS</span></div><h2 class="section-title" id="achievementsTitle">Results from the <em>arena.</em></h2></div><p class="section-description">Competition work has been a direct test of design decisions, system reliability, and teamwork.</p></div>
+        <article class="champion-card" data-reveal>
+          <div class="champion-mark" aria-hidden="true"><span>1</span><i>ST</i><b>PLACE</b></div>
+          <div class="champion-copy"><p class="eyebrow">MAKEX <span>/</span> NATIONAL ROBOTICS COMPETITION</p><h3>National Champion</h3><p>Achieved 1st place at the MakeX national robotics competition.</p></div>
+          <span class="champion-corner" aria-hidden="true">MM / AWARD 01</span>
+        </article>
+        <div class="achievement-grid">
+          <article class="achievement-card" data-reveal><div class="achievement-top"><span class="achievement-symbol">CSAW</span><span class="achievement-rank">1ST PLACE</span></div><p class="eyebrow">CSAW <span>/</span> 0hmSec</p><h3>Cybersecurity challenge winner</h3><p>Won first place in the 0hmSec challenge. The competition examined how weaknesses in a robot’s connected network could affect access, operation, programmed behaviour, and sensitive information.</p><span class="achievement-note">ROBOTICS × CYBERSECURITY</span></article>
+          <article class="achievement-card" data-reveal><div class="achievement-top"><span class="achievement-symbol">SUMO</span><span class="achievement-rank">QUARTERFINALIST</span></div><p class="eyebrow">SUMO X <span>/</span> AUTONOMOUS ROBOTICS</p><h3>More than 15 consecutive wins</h3><p>Competed with a custom-built robot, won more than 15 consecutive rounds, and advanced to the quarterfinals.</p><span class="achievement-note">CUSTOM ROBOT · COMPETITION</span></article>
+          <article class="achievement-card" data-reveal><div class="achievement-top"><span class="achievement-symbol">ROS 2</span><span class="achievement-rank rank-participation">PARTICIPANT</span></div><p class="eyebrow">EMIRATES ROBOTICS COMPETITION</p><h3>Robotics software in practice</h3><p>Participated and explored ROS 2 nodes, topics, publishers, subscribers, and communication between robotics software components.</p><span class="achievement-note">ROS 2 · SYSTEMS COMMUNICATION</span></article>
+        </div>
+      </section>
+
+      <section class="section leadership-section wrap" id="involvement" aria-labelledby="involvementTitle">
+        <div class="section-heading" data-reveal><div><div class="section-kicker"><span class="section-index">06</span><span>INVOLVEMENT</span></div><h2 class="section-title" id="involvementTitle">Working with <em>people.</em></h2></div></div>
+        <div class="involvement-grid">
+          <article class="involvement-card" data-reveal><span class="involvement-index">A / AIRC</span><h3>Robotics & Innovation Club</h3><p>Involved in AIRC robotics and engineering activities, collaboration with other university clubs, and technical events and initiatives.</p></article>
+          <article class="involvement-card" data-reveal><span class="involvement-index">B / COMPETITION TRACK</span><h3>Electrical department contact</h3><p>Served as a contact for the electrical department in a robotics competition track, supporting technical coordination, communication between departments, and competition preparation.</p></article>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contactTitle">
+        <div class="wrap contact-inner" data-reveal>
+          <div><div class="section-kicker"><span class="section-index">07</span><span>CONTACT</span></div><h2 class="section-title" id="contactTitle">Let’s talk <em>engineering.</em></h2><p class="contact-intro">For project conversations, collaboration, or a good technical question.</p></div>
+          <div class="contact-links" id="contactLinks" aria-label="Contact links">
+            <div class="contact-item" data-contact="email"><span class="contact-label">EMAIL</span><span class="contact-value">Add email address in app.js</span></div>
+            <div class="contact-item" data-contact="github"><span class="contact-label">GITHUB</span><span class="contact-value">Add profile URL in app.js</span></div>
+            <div class="contact-item" data-contact="linkedin"><span class="contact-label">LINKEDIN</span><span class="contact-value">Add profile URL in app.js</span></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer wrap"><a class="brand footer-brand" href="#home"><span class="brand-mark">MM<span>.</span></span><span class="brand-name">MOHAMAD<br />MOUKAYED</span></a><span class="footer-note">ENGINEERING PORTFOLIO <i>·</i> UAE</span><a href="#home" class="footer-top">Back to top ↑</a><span class="footer-year">© <span id="yearNow"></span></span></footer>
+
+    <aside class="guided-tour" id="guidedTour" aria-label="Guided portfolio tour" hidden>
+      <button class="tour-close" id="tourClose" type="button" aria-label="Close guided tour">×</button>
+      <p class="tour-label"><span class="status-dot"></span> GUIDED TOUR <span id="tourCount">01 / 05</span></p>
+      <h2 id="tourTitle">Start with the work.</h2>
+      <p id="tourDescription">Explore the projects and how they fit together.</p>
+      <div class="tour-controls"><button class="tour-skip" id="tourSkip" type="button">Skip tour</button><button class="tour-next" id="tourNext" type="button">Next section <span aria-hidden="true">→</span></button></div>
+    </aside>
+    <div class="announcement" id="announcement" aria-live="polite"></div>
+  </body>
+</html>
