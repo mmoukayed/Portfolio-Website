@@ -1,0 +1,4 @@
+node_modules/
+.admin-auth.json
+.admin-auth.json.tmp
+.DS_Store
