@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101515" />
+  <title>Portfolio Admin — Mohamad Moukayed</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/assets/webauthn-browser.js" defer></script>
+  <script src="/admin.js" defer></script>
+</head>
+<body class="admin-page">
+  <header class="site-header"><div class="header-inner"><a class="brand" href="/"><span class="brand-mark">MM<span>.</span></span><span class="brand-name">MOHAMAD<br />MOUKAYED</span></a><a class="header-contact" href="/">View portfolio <span>↗</span></a></div></header>
+  <main class="admin-main wrap">
+    <p class="eyebrow"><span class="status-dot"></span> PORTFOLIO CONTROL PANEL</p>
+    <h1>Website <em>content.</em></h1>
+    <p class="admin-intro">Edit the content shown on your portfolio. Changes save to the server and appear on the public page.</p>
+    <section class="admin-session-actions" aria-label="Passkey and session settings">
+      <p>Passkey access is active. Add a second passkey so you can still sign in if you lose access to the first.</p>
+      <div><button id="addPasskey" class="button button-outline" type="button">Add another passkey <span>↗</span></button><button id="signOut" class="button button-outline" type="button">Sign out</button></div>
+      <p id="securityStatus" role="status" aria-live="polite"></p>
+    </section>
+    <form id="contentForm">
+      <section class="admin-group"><h2>Introduction</h2>
+        <label>Hero introduction<textarea name="heroIntro" rows="3" required></textarea></label>
+      </section>
+      <section class="admin-group"><h2>Featured project · Chocolate printer</h2>
+        <label>Project title<input name="featuredTitle" required /></label>
+        <label>Short description<textarea name="featuredSummary" rows="3" required></textarea></label>
+        <label>Technical description<textarea name="featuredDescription" rows="3" required></textarea></label>
+      </section>
+      <section class="admin-group"><h2>Competition</h2>
+        <label>Competition name<input name="competition" required /></label>
+        <label>Team name<input name="team" required /></label>
+        <label>Result description<textarea name="competitionDescription" rows="2" required></textarea></label>
+      </section>
+      <section class="admin-group"><h2>Contact links</h2>
+        <label>Email<input name="email" type="email" /></label>
+        <label>GitHub URL<input name="github" type="url" /></label>
+        <label>LinkedIn URL<input name="linkedin" type="url" /></label>
+      </section>
+      <div class="admin-actions"><button class="button button-solid" type="submit">Save changes <span>↗</span></button><p id="saveStatus" aria-live="polite"></p></div>
+    </form>
+  </main>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "heroIntro": "I’m Mohamad Moukayed, an engineering student building across robotics, embedded systems, electronics, and software. I enjoy practical problems where hardware and software have to work together.",
+  "featuredTitle": "Custom Chocolate 3D Printer",
+  "featuredSummary": "A custom 3D printer designed to extrude chocolate, built around NEMA stepper motors, a Raspberry Pi 5, and Klipper firmware.",
+  "featuredDescription": "The project brings together a motion platform, stepper motor control, and printer firmware to turn chocolate into a printable material. The machine is controlled by a Raspberry Pi 5 running Klipper.",
+  "competition": "Hack My Robot",
+  "team": "0hmSec",
+  "competitionDescription": "Won first place at the NYUAD Hack My Robot competition as part of team 0hmSec.",
+  "email": "",
+  "github": "",
+  "linkedin": ""
+}

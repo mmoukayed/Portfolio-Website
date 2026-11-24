@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101515" />
+  <title>Admin sign in — Mohamad Moukayed</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/assets/webauthn-browser.js" defer></script>
+  <script src="/admin-login.js" defer></script>
+</head>
+<body class="admin-page">
+  <header class="site-header"><div class="header-inner"><a class="brand" href="/"><span class="brand-mark">MM<span>.</span></span><span class="brand-name">MOHAMAD<br />MOUKAYED</span></a><a class="header-contact" href="/">View portfolio <span>↗</span></a></div></header>
+  <main class="admin-main wrap admin-auth-main">
+    <p class="eyebrow"><span class="status-dot"></span> PORTFOLIO CONTROL PANEL</p>
+    <h1>Passkey <em>access.</em></h1>
+    <p class="admin-intro">Use a passkey saved to your device or password manager to open the content editor.</p>
+    <section class="admin-auth-card" aria-labelledby="authHeading">
+      <h2 id="authHeading">Admin sign in</h2>
+      <div id="setupPanel" hidden>
+        <p>Create the first passkey for this portfolio admin. You will use it for future sign-ins.</p>
+        <label id="setupTokenLabel" class="auth-label" hidden>One-time setup token<input id="setupToken" type="password" autocomplete="off" /></label>
+        <button id="setupPasskey" class="button button-solid" type="button">Create first passkey <span>↗</span></button>
+      </div>
+      <div id="loginPanel" hidden>
+        <p>Sign in with one of the passkeys registered for this admin.</p>
+        <button id="loginPasskey" class="button button-solid" type="button">Continue with passkey <span>↗</span></button>
+      </div>
+      <p id="authStatus" class="auth-status" role="status" aria-live="polite">Checking passkey setup…</p>
+    </section>
+  </main>
+</body>
+</html>

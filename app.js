@@ -1,11 +1,3 @@
-// Add a value here when Mohamad is ready to publish a contact destination.
-// Leave blank to keep the visible, non-clickable setup prompt in the footer.
-const profileLinks = {
-  email: "",
-  github: "",
-  linkedin: ""
-};
-
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 
@@ -84,11 +76,11 @@ $('#modelControl').addEventListener('click', () => {
 
 // Guided tour: visitors can advance while seeing each destination on the page.
 const tourStops = [
-  { target: 'projects', title: 'Start with the work.', description: 'The autonomous sumo robot leads the featured builds, with technical notes for each project.' },
+  { target: 'projects', title: 'Start with the work.', description: 'The custom chocolate 3D printer leads the featured builds, with technical notes for each project.' },
   { target: 'experiments', title: 'Then the lab notes.', description: 'These are smaller experiments and prototypes, clearly marked by their current status.' },
   { target: 'skills', title: 'The tools behind it.', description: 'Browse the technical toolkit by discipline, without arbitrary skill ratings.' },
-  { target: 'achievements', title: 'Competition results.', description: 'MakeX and CSAW results sit alongside the other competition experience.' },
-  { target: 'contact', title: 'Continue the conversation.', description: 'Contact destinations can be added in the profileLinks object in app.js.' }
+  { target: 'achievements', title: 'Competition results.', description: 'MakeX and NYUAD Hack My Robot results sit alongside the other competition experience.' },
+  { target: 'contact', title: 'Continue the conversation.', description: 'Contact destinations can be added in the admin panel.' }
 ];
 const guidedTour = $('#guidedTour');
 const tourTrigger = $('#tourTrigger');
@@ -136,7 +128,7 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
-// Populate only contact links supplied by Mohamad. Missing details remain explicit prompts.
+// Read editable portfolio content from the local Node server.
 function validWebUrl(value) {
   try {
     const url = new URL(value);
@@ -145,27 +137,39 @@ function validWebUrl(value) {
     return '';
   }
 }
-const contactLabels = {
-  email: { prompt: 'Add email address in app.js', value: profileLinks.email, href: profileLinks.email ? `mailto:${profileLinks.email}` : '' },
-  github: { prompt: 'Add profile URL in app.js', value: validWebUrl(profileLinks.github), href: validWebUrl(profileLinks.github) },
-  linkedin: { prompt: 'Add profile URL in app.js', value: validWebUrl(profileLinks.linkedin), href: validWebUrl(profileLinks.linkedin) }
-};
-$$('[data-contact]').forEach((item) => {
-  const entry = contactLabels[item.dataset.contact];
-  if (!entry?.value || !entry.href) {
-    const placeholder = $('.contact-value', item);
-    placeholder.textContent = entry?.prompt ?? 'Add contact details in app.js';
-    placeholder.classList.add('placeholder');
-    return;
-  }
-  const anchor = document.createElement('a');
-  anchor.href = entry.href;
-  anchor.textContent = entry.value;
-  if (entry.href.startsWith('https:')) {
-    anchor.target = '_blank';
-    anchor.rel = 'noopener noreferrer';
-  }
-  $('.contact-value', item).replaceWith(anchor);
-});
+fetch('/api/content').then((response) => response.ok ? response.json() : Promise.reject())
+  .then((content) => {
+    $('.hero-intro').textContent = content.heroIntro;
+    $('.featured-copy h3').textContent = content.featuredTitle;
+    $('.project-summary').textContent = content.featuredSummary;
+    $('.project-description').textContent = content.featuredDescription;
+    const competition = $('.achievement-card');
+    $('.eyebrow', competition).innerHTML = `NYUAD <span>/</span> ${escapeHtml(content.competition).toUpperCase()}`;
+    $('h3', competition).textContent = `${content.competition} winner`;
+    $('p:not(.eyebrow)', competition).textContent = content.competitionDescription;
+    $('.achievement-note', competition).textContent = `TEAM ${content.team} · ROBOTICS × CYBERSECURITY`;
+
+    const prompts = { email: 'Add email address in the admin panel', github: 'Add profile URL in the admin panel', linkedin: 'Add profile URL in the admin panel' };
+    $$('[data-contact]').forEach((item) => {
+      const key = item.dataset.contact;
+      const value = content[key] || '';
+      const href = key === 'email' ? (value ? `mailto:${value}` : '') : validWebUrl(value);
+      if (!value || !href) {
+        const placeholder = $('.contact-value', item);
+        placeholder.textContent = prompts[key];
+        placeholder.classList.add('placeholder');
+        return;
+      }
+      const anchor = document.createElement('a');
+      anchor.href = href;
+      anchor.textContent = value;
+      if (href.startsWith('https:')) { anchor.target = '_blank'; anchor.rel = 'noopener noreferrer'; }
+      $('.contact-value', item).replaceWith(anchor);
+    });
+  }).catch(() => {});
+
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
+}
 
 $('#yearNow').textContent = new Date().getFullYear();
