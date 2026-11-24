@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+// Add a value here when Mohamad is ready to publish a contact destination.
+// Leave blank to keep the visible, non-clickable setup prompt in the footer.
+const profileLinks = {
+  email: "mohamadmoukayed1@gmail.com",
+  github: "https://github.com/mmoukayed",
+  linkedin: "https://www.linkedin.com/in/mohamad-moukayed-791b47392/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BpmD7KWi%2FT4a6wQQmIlVrYQ%3D%3D"
+};
+
+>>>>>>> b5cc8f1b965d13e22cbf3f9ceb4dfe55074bf2ba
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 
