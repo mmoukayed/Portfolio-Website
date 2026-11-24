@@ -23,7 +23,7 @@ async function loadContent() {
       if (form.elements[key]) form.elements[key].value = value;
     }
   } catch {
-    status.textContent = 'Could not load content. Start the site with npm start.';
+    status.textContent = 'Could not load content. Check that the admin service is available.';
   }
 }
 
@@ -44,7 +44,7 @@ form.addEventListener('submit', async (event) => {
     if (!response.ok) throw new Error('Save failed.');
     status.textContent = 'Saved. Your portfolio is up to date.';
   } catch (error) {
-    status.textContent = error.message || 'Save failed. Check that the local server is running.';
+    status.textContent = error.message || 'Save failed. Check that the admin service is available.';
   } finally {
     submit.disabled = false;
   }

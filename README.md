@@ -17,6 +17,14 @@ Open the portfolio at http://localhost:3000 and the admin board at http://localh
 
 The local server listens on 127.0.0.1 by default so the content editor is only available on this computer.
 
+## Deploying to Cloudflare Workers
+
+The Worker uses `src/index.js`, serves built files from `public/`, and stores content, passkeys, sessions, and challenges in the `portfolio_admin` D1 binding. Copy `.dev.vars.example` to `.dev.vars` for local Worker development, then set a random `ADMIN_SETUP_TOKEN` and use `http://localhost:8787` as `ADMIN_ORIGIN` in that local file.
+
+Run `npm run db:migrate:local` before local development. Run `npm run dev` to build the static files and start Wrangler. The Wrangler config already points to the production D1 database; run `npm run db:migrate:remote` once to create its tables and seed the current portfolio content. Set `ADMIN_SETUP_TOKEN` with `npx wrangler secret put ADMIN_SETUP_TOKEN`, then deploy with `npm run deploy`.
+
+In Cloudflare Workers Builds, use the repository root as the root directory, leave the separate build command blank, and set the deploy command to `npm run deploy`. This deploy script builds the public assets before invoking Wrangler.
+
 ## Admin passkey
 
 Open the localhost address printed by the server and visit `/admin`. On first use, create a passkey with your device or password manager. Add a second passkey from the admin page as a recovery option.

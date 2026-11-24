@@ -6,10 +6,19 @@
     "node": ">=22"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "node scripts/build-assets.js",
+    "dev": "npm run build && wrangler dev",
+    "preview": "npm run build && wrangler preview",
+    "deploy": "npm run build && wrangler deploy",
+    "db:migrate:local": "wrangler d1 migrations apply portfolio-admin --local",
+    "db:migrate:remote": "wrangler d1 migrations apply portfolio-admin --remote"
   },
   "dependencies": {
     "@simplewebauthn/browser": "^14.0.0",
     "@simplewebauthn/server": "^14.1.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.167.0"
   }
 }

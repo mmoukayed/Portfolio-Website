@@ -1,0 +1,25 @@
+{
+    "$schema": "./node_modules/wrangler/config-schema.json",
+    "name": "portfolio-website",
+    "main": "src/index.js",
+    "compatibility_date": "2026-11-24",
+    "assets": {
+        "directory": "./public",
+        "binding": "ASSETS",
+        "run_worker_first": [
+            "/api/*",
+            "/admin*"
+        ]
+    },
+    "d1_databases": [
+        {
+            "binding": "portfolio_admin",
+            "database_name": "portfolio-admin",
+            "database_id": "0b16ebce-acc4-495c-b741-f1f2ad32b1cb",
+            "migrations_dir": "migrations"
+        }
+    ],
+    "vars": {
+        "ADMIN_ORIGIN": "https://mohd.top"
+    }
+}

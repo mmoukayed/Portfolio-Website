@@ -1,0 +1,2 @@
+ADMIN_ORIGIN=http://localhost:8787
+ADMIN_SETUP_TOKEN=replace-this-with-a-random-secret-of-at-least-32-characters

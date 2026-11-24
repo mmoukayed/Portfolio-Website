@@ -39,7 +39,7 @@ async function loadStatus() {
     loginPanel.hidden = false;
     authStatus.textContent = 'Your passkey is required to open the content editor.';
   } catch {
-    authStatus.textContent = 'Could not reach the server. Start the site with npm start and open the printed localhost address.';
+    authStatus.textContent = 'Could not reach the admin service. Check your connection and reload the page.';
   }
 }
 
